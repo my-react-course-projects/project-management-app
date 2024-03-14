@@ -1,4 +1,4 @@
-import '../styles/main.scss';
+import '../src/styles/main.scss';
 
 if( process.env.NODE_ENV === 'production' ) {
     console.log('Production Mode')
