@@ -38,17 +38,13 @@ const config = {
                 exclude: /node_modules/,
                 use: { loader: 'babel-loader',
                  options: {
-                    presets: ['@babel/preset-react', '@babel/preset-env']
+                    presets: [['@babel/preset-react', {'runtime': 'automatic'}], '@babel/preset-env']
                    }
                 },
             },
             {
                 test: /\.css$/i,
-                use: [ stylesHandler, 'css-loader' ]
-            },
-            { 
-                test: /\.s[ac]ss$/i, 
-                use: [ stylesHandler, 'css-loader', 'postcss-loader'] 
+                use: [ stylesHandler, 'css-loader', 'postcss-loader']
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
