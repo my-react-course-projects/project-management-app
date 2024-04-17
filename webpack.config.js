@@ -20,7 +20,7 @@ const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader
 class RunAfterCompile{
     apply(compiler) {
         compiler.hooks.done.tap('Copy images', () => {
-            fse.copySync(`./${sourceDir}/images`, `./${buildDir}/images`)
+            fse.copySync(`./${sourceDir}/assets/images`, `./${buildDir}/assets/images`)
         })
     }
 }
@@ -48,7 +48,7 @@ const config = {
             },
             { 
                 test: /\.s[ac]ss$/i, 
-                use: [ stylesHandler, 'css-loader', 'sass-loader'] 
+                use: [ stylesHandler, 'css-loader',] 
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -70,9 +70,9 @@ const config = {
         //     ]
         // }),
         new HtmlWebpackPlugin({
-            title: 'Update this accordingly...',
+            title: 'Project Mgmt Application',
             template: `./${sourceDir}/index.hbs`,
-            description: 'Some Description of your choice'
+            description: 'Web Application built using Core React Concepts'
         })
     ],
     optimization: {
