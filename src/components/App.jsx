@@ -1,9 +1,19 @@
-import React from 'react'
+import HeaderWrapper from './Presentation/Wrappers/HeaderWrapper.jsx'
+import MainWrapper from './Presentation/Wrappers/MainWrapper.jsx'
+import FooterWrapper from './Presentation/Wrappers/FooterWrapper.jsx'
 
 const App = () => {
     return (
         <>
-            <h1>Hello World!</h1>
+            <HeaderWrapper>
+
+            </HeaderWrapper>
+            <MainWrapper>
+
+            </MainWrapper>
+            <FooterWrapper>
+
+            </FooterWrapper>
         </>
     )
 }
